@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root colors */
+:root {
+  --background: #121212; /* Dark background */
+  --foreground: #e0e0e0; /* Light text for readability */
+  --accent: #1e90ff; /* Bright blue for primary accents */
+  --secondary: #b0b0b0; /* Subtle gray for secondary text */
+}
+
+/* Dark mode settings */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a; /* Very dark background */
+    --foreground: #f0f0f0; /* Lighter text */
+    --accent: #3b82f6; /* Bright blue for accents */
+    --secondary: #c0c0c0; /* Light gray for secondary details */
+  }
+}
+
+/* Body styles */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Premium sans-serif font */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', 'Times New Roman', Times, serif; /* Elegant serif font for headers */
+  margin-bottom: 1rem;
+  color: var(--foreground); /* Ensure headers are light */
+}
+
+/* Link styles */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1d4ed8; /* Darker shade for hover */
+  text-decoration: underline;
+}
+
+/* Button styles */
+button {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8; /* Darker shade for hover */
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Card styles */
+.card {
+  background-color: #1e1e1e; /* Darker card background */
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Container and layout styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Utility classes for dark mode */
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
