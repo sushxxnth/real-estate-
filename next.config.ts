@@ -1,10 +1,5 @@
-// next.config.ts
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  experimental: {
-    appDir: true, // This enables the App Router feature.
-  },
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
